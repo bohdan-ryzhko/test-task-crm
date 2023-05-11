@@ -1,18 +1,21 @@
 import './App.scss';
-import React, { FC, createContext } from 'react';
+import React, { FC } from 'react';
 import { Dashboard } from './Dashboard/Dashboard';
 import { userInfo } from '../stateUser/userInfo';
-import { UserInfoInterface } from '../interfaces/UserInfoInterface';
-
-export const UserContext = createContext<UserInfoInterface>(userInfo);
+import { UserContext } from './UserContext/UserContext';
+import { ContentWrapper } from './ContentWrapper/ContentWrapper';
+import { MainTitle } from './MainTitle/MainTitle';
 
 const App:FC = () => {
   return (
-    <div className="App">
-      <UserContext.Provider value={userInfo}>
+    <UserContext.Provider value={userInfo}>
+      <div className="App">
         <Dashboard />
-      </UserContext.Provider>
-    </div>
+        <ContentWrapper>
+          <MainTitle />
+        </ContentWrapper>
+      </div>
+    </UserContext.Provider>
   );
 }
 
