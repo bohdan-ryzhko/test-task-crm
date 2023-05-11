@@ -1,0 +1,31 @@
+.logo {
+  margin-bottom: 64px;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  & > span {
+    position: relative;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: calc(39 / 26);
+    &::after {
+      content: "v.01";
+      position: absolute;
+      width: 18px;
+      height: 15px;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: calc(15 / 10);
+      letter-spacing: -0.01em;
+      right: -22px;
+      bottom: 7px;
+      color: #838383;
+    }
+  }
+}
+
+.logoName {
+}

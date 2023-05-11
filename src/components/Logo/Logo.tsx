@@ -5,11 +5,13 @@ import { sizeLogo } from "../../constants/sizeLogo";
 
 export const Logo: FC = () => {
 	return (
-		<a href="/">
-			<div className={sass.logoImg}>
-				<img width={sizeLogo.width} height={sizeLogo.height} src={logo} alt="Logo" />
-			</div>
-			<span>Dashboard</span>
-		</a>
+		<div className={sass.logo}>
+			<a className={sass.logoLink} href="/">
+				<div className={sass.logoImg}>
+					<img width={sizeLogo.width} height={sizeLogo.height} src={logo} alt="Logo" />
+				</div>
+				<span className={sass.logoName}>Dashboard</span>
+			</a>
+		</div>
 	)
 }
