@@ -1,0 +1,1 @@
+export const secondaryColor = "#9197B3";
