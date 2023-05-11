@@ -1,3 +1,4 @@
+import sass from "./NavigationItem.module.scss";
 import { FC } from "react";
 import { NavigationItemInterface } from "../../interfaces/NavigationItemInterface";
 import { RiArrowRightSLine } from "react-icons/ri";
@@ -9,10 +10,10 @@ interface NavigationItemProps {
 
 export const NavigationItem: FC<NavigationItemProps> = ({ item }) => {
 	return (
-		<>
-			<item.icon />
+		<a className={item.active ? sass.navigationLinkActive : sass.navigationLink} href="/">
+			<item.icon style={{ marginRight: 16 }} />
 			<p>{item.text}</p>
-			<RiArrowRightSLine color={secondaryColor} />
-		</>
+			<RiArrowRightSLine style={{ marginLeft: "auto" }} color={secondaryColor} />
+		</a>
 	)
 }

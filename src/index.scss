@@ -1,3 +1,5 @@
+@import "./sass/helper";
+
 *,
 *::before,
 *::after {
@@ -8,6 +10,7 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
+  background-color: $--body-color;
 }
 
 ul,
@@ -37,4 +40,5 @@ button {
 a {
   text-decoration: none;
   color: inherit;
+  display: inline-block;
 }

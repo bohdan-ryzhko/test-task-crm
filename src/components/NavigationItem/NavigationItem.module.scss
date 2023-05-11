@@ -1,0 +1,24 @@
+@import "../../sass/helper";
+
+.navigationLink,
+.navigationLinkActive {
+  display: flex;
+  align-items: center;
+  padding-top: 11px;
+  padding-left: 11px;
+  padding-bottom: 11px;
+  padding-right: 13px;
+}
+
+.navigationLink {
+  color: $--secondary-color;
+}
+
+.navigationLinkActive {
+  background-color: $--accent-color;
+  color: $--navigation-active-color;
+  border-radius: 8px;
+  & > svg {
+    fill: $--navigation-active-color;
+  }
+}

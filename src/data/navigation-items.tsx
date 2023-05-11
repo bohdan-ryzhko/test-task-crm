@@ -8,10 +8,10 @@ import { ReactComponent as icon6 } from "../images/dashboard-navigation/icon-6.s
 import { NavigationItemInterface } from "../interfaces/NavigationItemInterface";
 
 export const navigationItems: NavigationItemInterface [] = [
-	{ icon: icon1, text: "Dashboard", id: "id-01" },
-	{ icon: icon2, text: "Product", id: "id-02" },
-	{ icon: icon3, text: "Customers", id: "id-03" },
-	{ icon: icon4, text: "Income", id: "id-04" },
-	{ icon: icon5, text: "Promote", id: "id-05" },
-	{ icon: icon6, text: "Help", id: "id-06" },
+	{ icon: icon1, text: "Dashboard", id: "id-01", active: false },
+	{ icon: icon2, text: "Product", id: "id-02", active: false },
+	{ icon: icon3, text: "Customers", id: "id-03", active: true },
+	{ icon: icon4, text: "Income", id: "id-04", active: false },
+	{ icon: icon5, text: "Promote", id: "id-05", active: false },
+	{ icon: icon6, text: "Help", id: "id-06", active: false },
 ];
