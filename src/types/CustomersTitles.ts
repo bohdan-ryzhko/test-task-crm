@@ -1,0 +1,1 @@
+export type CustomersTitles = "Customer Name" | "Company" | "Phone Number" | "Email" | "Country" | "Status";

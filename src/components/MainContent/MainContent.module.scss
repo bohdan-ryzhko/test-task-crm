@@ -1,0 +1,23 @@
+@import "../../sass/helper";
+
+.mainContent {
+  background-color: $--navigation-active-color;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  max-width: 968px;
+  width: 100%;
+  border-radius: 30px;
+}
+
+.mainContainer {
+  padding-left: 38px;
+  padding-right: 44px;
+}
+
+.mainContentTop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}

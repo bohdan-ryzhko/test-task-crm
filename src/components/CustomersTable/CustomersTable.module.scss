@@ -1,0 +1,73 @@
+@import "../../sass/helper";
+
+.customersTable {
+  padding-left: 38px;
+  padding-right: 44px;
+  min-width: 100%;
+}
+
+.customersHead {
+  position: relative;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #eee;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  & > tr {
+    & > th {
+      text-align: left;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: calc(21 / 14);
+      letter-spacing: -0.01em;
+      color: $--secondary-color;
+      padding-bottom: 14px;
+    }
+  }
+}
+
+.customersBody {
+  & > tr {
+    position: relative;
+    & > td {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+    &::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: #eee;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.Active,
+.Inactive {
+  text-align: center;
+  padding: 4px 18px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(21 / 14);
+  letter-spacing: -0.01em;
+}
+
+.Active {
+  color: $--active-color;
+  background-color: $--active-bg-color;
+  border: 1px solid $--active-color;
+}
+
+.Inactive {
+  color: $--inactive-color;
+  background-color: $--inactive-bg-color;
+  border: 1px solid $--inactive-color;
+}

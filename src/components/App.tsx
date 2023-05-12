@@ -5,6 +5,7 @@ import { userInfo } from '../stateUser/userInfo';
 import { UserContext } from './UserContext/UserContext';
 import { ContentWrapper } from './ContentWrapper/ContentWrapper';
 import { MainTitle } from './MainTitle/MainTitle';
+import { MainContent } from './MainContent/MainContent';
 
 const App:FC = () => {
   return (
@@ -13,6 +14,7 @@ const App:FC = () => {
         <Dashboard />
         <ContentWrapper>
           <MainTitle />
+          <MainContent />
         </ContentWrapper>
       </div>
     </UserContext.Provider>

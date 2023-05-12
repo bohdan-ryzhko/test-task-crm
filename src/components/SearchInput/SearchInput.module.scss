@@ -1,0 +1,35 @@
+@import "../../sass/helper";
+
+.searchInput {
+  position: relative;
+  margin-right: 9px;
+  & > input {
+    height: 100%;
+    display: inline-block;
+    margin: 0;
+    border: none;
+    min-height: 38px;
+    max-width: 216px;
+    width: 100%;
+    background-color: $--input-bg;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-bottom: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(18 / 12);
+    letter-spacing: -0.01em;
+    color: $--secondary-color;
+
+    &:focus-visible {
+      outline: 1px solid $--secondary-color;
+    }
+  }
+  & > svg {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
