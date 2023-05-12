@@ -14,7 +14,7 @@ export const CustomersTable:FC<CustomersTableProps> = ({ customersTitles, custom
 					<tr>
 						{
 							customersTitles.map((title: CustomersTitlesInterface) =>
-								<th key={title.title} >{title.title}</th>)
+								<th key={title.id} >{title.title}</th>)
 						}
 					</tr>
 				</thead>
@@ -30,12 +30,7 @@ export const CustomersTable:FC<CustomersTableProps> = ({ customersTitles, custom
 										<td>{customer.phoneNumber}</td>
 										<td>{customer.email}</td>
 										<td>{customer.country}</td>
-										<td>
-											<p className={customer.status === "Active"
-												? sass.Active
-												: sass.Inactive
-											}>{customer.status}</p>
-										</td>
+										<td className={customer.status === "Active" ? sass.Active : sass.Inactive}></td>
 									</tr>
 								)
 							)
@@ -48,7 +43,7 @@ export const CustomersTable:FC<CustomersTableProps> = ({ customersTitles, custom
 					<tr>
 						{
 							customersTitlesMobile.map((title: CustomersTitlesInterface) =>
-								<th key={title.title} >{title.title}</th>)
+								<th key={title.id} >{title.title}</th>)
 						}
 					</tr>
 				</thead>
