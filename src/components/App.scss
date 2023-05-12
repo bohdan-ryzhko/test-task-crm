@@ -1,5 +1,9 @@
 @import "../sass/helper";
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .App {
   @include desktop {
     display: grid;
