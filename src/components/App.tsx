@@ -6,7 +6,6 @@ import { UserContext } from '../hooks/UserContext';
 import { ContentWrapper } from './ContentWrapper/ContentWrapper';
 import { MainTitle } from './MainTitle/MainTitle';
 import { MainContent } from './MainContent/MainContent';
-
 import { OPEN_MODAL } from '../types/OpenModal';
 
 const App: FC = () => {
