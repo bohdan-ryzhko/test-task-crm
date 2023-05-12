@@ -11,17 +11,17 @@ export const CustomersTable:FC<CustomersTableProps> = ({ customersTitles, custom
 				<tr>
 					{
 						customersTitles.map((title: CustomersTitlesInterface) =>
-							<th>{title.title}</th>)
+							<th key={title.title} >{title.title}</th>)
 					}
 				</tr>
 			</thead>
 			<tbody className={sass.customersBody}>
 				{
 					customers.length === 0
-						? <p>Not found</p>
+						? <p className={sass.notFound}>Not found</p>
 						: (
 							customers.map((customer: CustomersInterface) =>
-								<tr>
+								<tr key={customer.id}>
 									<td>{customer.customerName}</td>
 									<td>{customer.company}</td>
 									<td>{customer.phoneNumber}</td>
