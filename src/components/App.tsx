@@ -1,5 +1,5 @@
 import './App.scss';
-import React, { FC, useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { Dashboard } from './Dashboard/Dashboard';
 import { userInfo } from '../stateUser/userInfo';
 import { UserContext } from '../hooks/UserContext';
@@ -17,15 +17,15 @@ const App: FC = () => {
   }, [toggleMenu]);
 
   return (
-    <UserContext.Provider value={userInfo}>
-      <div className="App">
+    <div className="App">
+      <UserContext.Provider value={userInfo}>
         <Dashboard toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
         <ContentWrapper setToggleMenu={setToggleMenu}>
           <MainTitle />
           <MainContent />
         </ContentWrapper>
-      </div>
-    </UserContext.Provider>
+      </UserContext.Provider>
+    </div>
   );
 }
 

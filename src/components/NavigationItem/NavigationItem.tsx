@@ -1,10 +1,6 @@
 import sass from "./NavigationItem.module.scss";
 import { FC } from "react";
-import { NavigationItemInterface } from "../../interfaces/NavigationItemInterface";
-
-interface NavigationItemProps {
-  item: NavigationItemInterface;
-}
+import { NavigationItemProps } from "../../interfaces/NavigationItemProps";
 
 export const NavigationItem: FC<NavigationItemProps> = ({ item }) => {
 	return (
