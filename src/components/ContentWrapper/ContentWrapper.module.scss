@@ -1,4 +1,26 @@
+@import "../../sass/helper";
+
 .section {
   padding-top: 41px;
-  padding-bottom: 258px;
+  padding-right: 20px;
+  padding-bottom: 50px;
+  padding-left: 20px;
+
+  @media screen and (max-width: 1279px) {
+    position: relative;
+  }
+
+  @include desktop {
+    padding-bottom: 258px;
+  }
+}
+
+.openMenu {
+  position: absolute;
+  top: 45px;
+  right: 45px;
+
+  @include desktop {
+    display: none;
+  }
 }

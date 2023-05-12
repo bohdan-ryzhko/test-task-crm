@@ -6,7 +6,6 @@ import { sizeSearchIcon } from "../../constants/sizeSearchIcon";
 interface SearchInputProps {
 	value: string,
 	onChange: (event: ChangeEvent<HTMLInputElement>) => void;
-	
 }
 
 export const SearchInput: FC<SearchInputProps> = ({ value, onChange }) => {
