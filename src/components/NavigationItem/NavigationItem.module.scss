@@ -14,11 +14,38 @@
   color: $--secondary-color;
 }
 
+.navigationLink,
+.navigationLinkActive {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7px;
+    height: 11px;
+    background-repeat: no-repeat;
+  }
+}
+
+.navigationLink {
+  &:after {
+    background-image: url("../../images/dashboard-navigation/navigation-arrow.svg");
+  }
+}
+
+.navigationLinkActive {
+  &:after {
+    background-image: url("../../images/dashboard-navigation/active-arrow.svg");
+  }
+}
+
 .navigationLinkActive {
   background-color: $--accent-color;
   color: $--navigation-active-color;
   border-radius: 8px;
-  & > svg {
-    fill: $--navigation-active-color;
+  & > svg > path {
+    stroke: $--navigation-active-color;
   }
 }

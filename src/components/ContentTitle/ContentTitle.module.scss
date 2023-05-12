@@ -15,4 +15,9 @@
   font-size: 14px;
   line-height: calc(21 / 14);
   letter-spacing: -0.01em;
+
+  @media screen and (max-width: 450px) {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
 }

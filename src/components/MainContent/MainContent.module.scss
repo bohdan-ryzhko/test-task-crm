@@ -21,10 +21,12 @@
 }
 
 .mainContentTop {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  @media screen and (min-width: 450px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
   margin-bottom: 40px;
 }
 
@@ -32,6 +34,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 670px) {
+    display: block;
+    text-align: center;
+  }
 }
 
 .countPagination {

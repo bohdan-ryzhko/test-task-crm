@@ -2,9 +2,12 @@
 
 .section {
   padding-top: 41px;
-  padding-right: 20px;
   padding-bottom: 50px;
-  padding-left: 20px;
+
+  @media screen and (min-width: 550px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
   @media screen and (max-width: 1279px) {
     position: relative;

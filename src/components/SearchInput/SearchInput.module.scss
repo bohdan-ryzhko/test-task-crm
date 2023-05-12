@@ -9,7 +9,6 @@
     margin: 0;
     border: none;
     min-height: 38px;
-    max-width: 216px;
     width: 100%;
     background-color: $--input-bg;
     border-radius: 10px;
@@ -21,6 +20,10 @@
     line-height: calc(18 / 12);
     letter-spacing: -0.01em;
     color: $--main-color;
+
+    @media screen and (min-width: 450px) {
+      max-width: 216px;
+    }
 
     &:focus-visible {
       outline: 1px solid $--secondary-color;

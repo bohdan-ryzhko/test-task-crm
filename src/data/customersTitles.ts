@@ -8,3 +8,9 @@ export const customersTitles: CustomersTitlesInterface[] = [
 	{ title: "Country" },
 	{ title: "Status" },
 ];
+
+export const customersTitlesMobile: CustomersTitlesInterface[] = [
+	{ title: "Customer Name" },
+	{ title: "Company" },
+	{ title: "Email" },
+];
