@@ -8,6 +8,7 @@ import { customersTitles } from "../../data/customersTitles";
 import { customers } from "../../data/customers";
 
 import { getFilteredCustomers } from "../../services/getFilteredCustomers";
+import { PaginationButtons } from "../PaginationButtons/PaginationButtons";
 
 export const MainContent: FC = () => {
 	//state filtered value
@@ -33,6 +34,16 @@ export const MainContent: FC = () => {
 			</div>
 			<div className={sass.customersBoard}>
 				<CustomersTable customers={filteredCustomers} customersTitles={customersTitles} />
+			</div>
+			<div className={sass.mainContainer}>
+				<div className={sass.mainInner}>
+					<div className={sass.mainFooter}>
+						<p className={sass.countPagination}>
+							Showing data 1 to 8 of  256K entries
+						</p>
+						<PaginationButtons />
+					</div>
+				</div>
 			</div>
 		</main>
 	)
