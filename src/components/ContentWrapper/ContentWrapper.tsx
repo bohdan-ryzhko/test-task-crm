@@ -6,7 +6,7 @@ import { TbMenu2 } from 'react-icons/tb';
 export const ContentWrapper: FC<ContentWrapperProps> = ({ children, setToggleMenu }) => {
 	return (
 		<section className={sass.section}>
-			<button onClick={() => setToggleMenu(true)} className={sass.openMenu} type="button">
+			<button onClick={() => setToggleMenu(prev => !prev)} className={sass.openMenu} type="button">
 				<TbMenu2 size={30} />
 			</button>
 			{children}
