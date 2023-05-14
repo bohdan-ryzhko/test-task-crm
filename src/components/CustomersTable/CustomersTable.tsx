@@ -9,49 +9,52 @@ import { customersTitlesMobile } from "../../data/customersTitles";
 export const CustomersTable:FC<CustomersTableProps> = ({ customersTitles, customers }) => {
 	return (
 		<>
-			<table className={sass.customersTable}>
-				<thead className={sass.customersHead}>
-					<tr>
-						{
-							customersTitles.map((title: CustomersTitlesInterface) =>
-								<th key={title.id} >{title.title}</th>)
-						}
-					</tr>
-				</thead>
-				<tbody className={sass.customersBody}>
-					{
-						customers.length === 0
-							? <p className={sass.notFound}>Not found</p>
-							: (
-								customers.map((customer: CustomersInterface) =>
-									<tr key={customer.id}>
-										<td>{customer.customerName}</td>
-										<td>{customer.company}</td>
-										<td>{customer.phoneNumber}</td>
-										<td>{customer.email}</td>
-										<td>{customer.country}</td>
-										<td className={customer.status === "Active" ? sass.Active : sass.Inactive}></td>
-									</tr>
-								)
-							)
-					}
-				</tbody>
-			</table>
+			{
+				customers.length === 0
+					? <p className={sass.notFound}>Not found</p>
+					: (
+						<table className={sass.customersTable}>
+							<thead className={sass.customersHead}>
+								<tr>
+									{
+										customersTitles.map((title: CustomersTitlesInterface) =>
+											<th key={title.id} >{title.title}</th>)
+									}
+								</tr>
+							</thead>
+							<tbody className={sass.customersBody}>
+								{
+									customers.map((customer: CustomersInterface) =>
+										<tr key={customer.id}>
+											<td>{customer.customerName}</td>
+											<td>{customer.company}</td>
+											<td>{customer.phoneNumber}</td>
+											<td>{customer.email}</td>
+											<td>{customer.country}</td>
+											<td className={customer.status === "Active" ? sass.Active : sass.Inactive}></td>
+										</tr>
+									)
+								}
+							</tbody>
+						</table>
+					)
+			}
 
-			<table className={sass.customersTableMobile}>
-					<thead className={sass.customersHead}>
-					<tr>
-						{
-							customersTitlesMobile.map((title: CustomersTitlesInterface) =>
-								<th key={title.id} >{title.title}</th>)
-						}
-					</tr>
-				</thead>
-				<tbody className={sass.customersBody}>
-					{
-						customers.length === 0
-							? <p className={sass.notFound}>Not found</p>
-							: (
+			{
+				customers.length === 0
+					? <p className={sass.notFoundMobile}>Not found</p>
+					: (
+						<table className={sass.customersTableMobile}>
+							<thead className={sass.customersHead}>
+							<tr>
+								{
+									customersTitlesMobile.map((title: CustomersTitlesInterface) =>
+										<th key={title.id} >{title.title}</th>)
+								}
+							</tr>
+						</thead>
+						<tbody className={sass.customersBody}>
+							{
 								customers.map((customer: CustomersInterface) =>
 									<tr className={customer.status === "Active"
 											? sass.statusActive
@@ -62,10 +65,11 @@ export const CustomersTable:FC<CustomersTableProps> = ({ customersTitles, custom
 										<td>{customer.email}</td>
 									</tr>
 								)
-							)
-					}
-				</tbody>
-			</table>
+							}
+						</tbody>
+					</table>
+					)
+			}
 		</>
 	)
 }

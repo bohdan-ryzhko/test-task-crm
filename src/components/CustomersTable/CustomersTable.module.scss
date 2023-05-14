@@ -11,13 +11,13 @@
 }
 
 .customersTable {
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 899px) {
     display: none;
   }
 }
 
 .customersTableMobile {
-  @media screen and (min-width: 899px) {
+  @media screen and (min-width: 900px) {
     display: none;
   }
 }
@@ -121,9 +121,23 @@
   }
 }
 
-.notFound {
+.notFound,
+.notFoundMobile {
   margin-top: 10px;
+  text-align: center;
   color: $--inactive-color;
+}
+
+.notFound {
+  @media screen and (max-width: 899px) {
+    display: none;
+  }
+}
+
+.notFoundMobile {
+  @media screen and (min-width: 900px) {
+    display: none;
+  }
 }
 
 .statusActive {

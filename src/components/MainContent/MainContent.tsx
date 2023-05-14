@@ -9,14 +9,19 @@ import { customers } from "../../data/customers";
 
 import { getFilteredCustomers } from "../../services/getFilteredCustomers";
 import { PaginationButtons } from "../PaginationButtons/PaginationButtons";
+import debounce from "lodash.debounce";
 
 export const MainContent: FC = () => {
 	//state filtered value
 	const [searchValue, setSearchValue] = useState<string>("");
 
+	const makeValue = debounce((value: string) => {
+		setSearchValue(value)
+	}, 300);
+
 	// handle filtered value
 	const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-		setSearchValue(event.target.value);
+		makeValue(event.target.value);
 	}
 
 	// search customers by company name
@@ -28,7 +33,7 @@ export const MainContent: FC = () => {
 				<div className={sass.mainInner}>
 					<div className={sass.mainContentTop}>
 						<ContentTitle title="All Customers" subtitle="Active Members" />
-						<SearchInput value={searchValue} onChange={handleChange} />
+						<SearchInput onChange={handleChange} />
 					</div>
 				</div>
 			</div>
