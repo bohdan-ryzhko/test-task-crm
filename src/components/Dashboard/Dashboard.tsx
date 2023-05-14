@@ -10,11 +10,11 @@ import { MdClose } from 'react-icons/md';
 export const Dashboard: FC<DashboardProps> = ({ toggleMenu, setToggleMenu }) => {
 	return (
 		<>
-			<div onClick={() => setToggleMenu(prev => !prev)} className={toggleMenu ? sass.backdropActive : sass.backdrop}></div>
-			<aside className={toggleMenu ? sass.dashboardActive : sass.dashboard}>
+			<div data-testid="dashboard-backdrop" onClick={() => setToggleMenu(prev => !prev)} className={toggleMenu ? sass.backdropActive : sass.backdrop}></div>
+			<aside data-testid="dashboard-container" className={toggleMenu ? sass.dashboardActive : sass.dashboard}>
 				<div className={sass.dashboardContainer}>
 					<div className={sass.dashboardInner}>
-						<button onClick={() => setToggleMenu(prev => !prev)} className={sass.closeMenu}>
+						<button data-testid='close-button' onClick={() => setToggleMenu(prev => !prev)} className={sass.closeMenu}>
 							<MdClose size={30}/>
 						</button>
 						<Logo />
