@@ -17,15 +17,3 @@ export const Default = () => {
 		<SearchInput value={searchValue} onChange={handleChange} />
 	);
 };
-
-export const WithInitialValue = () => {
-	const [searchValue, setSearchValue] = useState("Initial value");
-
-	const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-		setSearchValue(event.target.value);
-	};
-
-	return (
-		<SearchInput value={searchValue} onChange={handleChange} />
-	);
-};
